@@ -17,7 +17,7 @@ const Listings = ({listings, loading}: Props) => {
   if (loading) {
     return (
         <div className='loading-section'>
-            <img src={loadingImg} className='loading-img' alt='loading-image' />
+            <img src={loadingImg} className='loading-img' alt='loading' />
             <p className='loading-text'>Scraping apartments, this may take a few minutes...</p>
         </div>
     )
