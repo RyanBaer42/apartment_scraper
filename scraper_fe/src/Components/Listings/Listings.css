@@ -40,7 +40,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
     .loading-img {
-      animation: loading-img-spin infinite 10s linear;
+      animation: loading-img-spin infinite 6s linear;
     }
 }
 
