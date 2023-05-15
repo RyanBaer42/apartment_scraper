@@ -11,7 +11,7 @@
 - cd into the repository
 - Install NPM packages by running npm install in your terminal
 - Start the server by running npm start in the server directory
-- Start the front end applciation by running npm start in the scraper_fe directory
+- Start the front end application by running npm start in the scraper_fe directory
 - After starting the server, the project will run at http://localhost:3000/
 
 ### Preview of App:
