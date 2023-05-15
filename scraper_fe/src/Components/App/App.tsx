@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import fetchData from '../../ApiCall';
 import Listings from '../Listings/Listings';
 import Pagination from '../Pagination/Pagination';
 import data from '../../data.json'
@@ -17,28 +18,17 @@ function App() {
   const [listingsPerPage] = useState(10);
 
   useEffect(() => {
-    const fetchData = () => {
-      return fetch(`http://localhost:3001/listings`)
-          .then(response => {
-              if (response.ok) {
-                  return response.json();
-              } else {
-                  throw new Error(`${response.status}`);
-              }
-          })
-          .then(data => {
-              setListings(data);
-              setLoading(false);
-          })
-          .catch(error => {
-              console.log(error);
-              setLoading(false);
-          });
-    };
-
-    fetchData();
-    
-    
+    fetchData()
+      .then(data => {
+          setListings(data);
+          setLoading(false);
+      })
+      .catch(error => {
+          console.log(error);
+          setLoading(false);
+      });
+    // setListings(data)
+    // setLoading(false)
   }, []);
 
   const indexOfLastListing = currentPage * listingsPerPage;

@@ -1,6 +1,8 @@
 version: '3'
 
 services:
+  db:
+    build: ./postgres
   backend:
     build: ./server
     ports:
